@@ -12,7 +12,7 @@ const WorkSection = () => {
           <Tag label="Work" />
         </div>
         <Typography variant="subtitle" className="max-w-xl text-center">
-          Some of the noteworthy projects I have worked on:
+          Some of the noteworthy projects We have worked on:
         </Typography>
       </div>
 
