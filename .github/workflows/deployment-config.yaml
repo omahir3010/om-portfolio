@@ -1,0 +1,61 @@
+name: Build and Deploy Portfolio
+
+on:
+  push:
+    branches:
+      - main
+
+env:
+  AWS_REGION: 'us-east-1'
+  S3_BUCKET_NAME: 'om-portfolio-vue-app'
+
+jobs:
+  build:
+    name: Build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+      
+    - uses: actions/setup-node@v2
+      with:
+        node-version: '18'
+        
+    - name: Install Dependencies
+      run: |
+        node --version
+        npm ci --production
+
+  deploy:
+    name: Deployment
+    needs: build
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+
+      
+    - name: Install Node Important Files
+      run: npm install
+        
+    - name: Build Static Website
+      run: npm run build
+
+      
+    - name: Configure AWS Credentials
+      uses: aws-actions/configure-aws-credentials@v4.0.1
+      with:
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+        aws-region: us-east-1
+      
+    - name: Sync Directory to S3
+      run: |
+        aws s3 sync ./out s3://om-portfolio-vue-app/
+
+    - name: Invalidate CloudFront Distribution
+      run: |
+        aws cloudfront create-invalidation --distribution-id EB9K3XMDOQ8CM --paths "/*"
