@@ -9,9 +9,9 @@ import Footer from '@/components/layout/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const title = 'Om Ahir | Full Stack Developer From Ahmedabad, India.';
+const title = 'Om Ahir | Full Stack Developer From Pune, India.';
 const description =
-  'A self-proclaimed designer who specializes in full stack development (React.js & Node.js), from Ahmedabad, India.';
+  'A self-proclaimed designer who specializes in full stack development (Vue.js & Node.js), from Pune, India.';
 const url = 'https://omahir.dev';
 
 export const metadata: Metadata = {

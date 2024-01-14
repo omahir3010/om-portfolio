@@ -47,12 +47,14 @@ const AboutMeSection = () => {
           <Typography>Finally, some quick bits about me.</Typography>
           <div className="flex flex-col gap-2 md:flex-row md:gap-6">
             <ul className="flex list-inside list-disc flex-col gap-2">
-              <Typography component="li">
-                B.E. in Computer Engineering
+              <Typography component="li" className='font-semibold'>AWS Certified Cloud Practitioner Certified
               </Typography>
-            </ul>
-            <ul className="flex list-inside list-disc flex-col gap-2">
-              <Typography component="li">DevOps Engineer</Typography>
+              <Typography component="li" className='font-semibold'>
+              AWS Certified Solutions Architect - Associate Certified
+              </Typography>
+              <Typography component="li" className='font-semibold'>
+              AZ-900: Microsoft Azure Certified
+              </Typography>
             </ul>
           </div>
         </div>

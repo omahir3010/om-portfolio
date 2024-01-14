@@ -40,6 +40,10 @@ const HeroSection = () => {
                 Excited to contribute my skills and drive for innovation to new endeavors in the ever-evolving landscape of technology.
             </Typography>
           </div>
+          <div>
+          <Typography className='text-[19px] font-medium'> Visit <a href="https://blog.omahir.com" target="_blank" className=' text-indigo-500 hover:underline'> My Blogs </a> to learn DevOps, AWS, and Vue.js. </Typography>
+
+          </div>
           <div className="flex flex-col gap-2">
             <div className="flex gap-2">
               <MapPin className="stroke-gray-600" />
