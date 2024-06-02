@@ -21,6 +21,9 @@ import LogoStorybook from '/public/images/logos/icon-storybook.svg';
 import LogoGit from '/public/images/logos/icon-git.svg';
 import LogoPersistent from '/public/images/logos/logo-persistent.svg';
 import LogoPersistentLight from '/public/images/logos/logo-persistent-light.svg';
+import LogoTerraformLight from '/public/images/logos/icon-terraform-light.svg';
+import LogoTerraformDark from '/public/images/logos/icon-terraform-dark.svg';
+
 
 import EST from '/public/images/logos/cisco-est.png';
 import U from '/public/images/logos/cisco-u.png';
@@ -145,6 +148,12 @@ export const TECHNOLOGIES: TechDetails[] = [
     darkModeLogo: LogoAWSLight,
     url: 'https://aws.amazon.com/',
   },
+  {
+    label: 'Terraform',
+    logo: LogoTerraformLight,
+    darkModeLogo: LogoTerraformDark,
+    url: 'https://www.terraform.io/',
+  }
 ];
 
 export const EXPERIENCES: ExperienceDetails[] = [
@@ -164,7 +173,11 @@ export const EXPERIENCES: ExperienceDetails[] = [
           to the right role or solution, helping them grow their skills, to accelerate their business
           transformation.`,
           `Implemented Manage Licences Functionality and Manage Entitlements Functionality for Cisco U.
-          and Cisco U Admin. Proficient in Vue3, VueJs, TailwindCSS, Storybook and Figma.`
+          and Cisco U Admin. Proficient in Vue3, VueJs, TailwindCSS, Storybook and Figma.`,
+          `Established a table structure within the Cisco Admin application to oversee the
+          administration of rules for managing Cisco Certification Badge through the Credly
+          API.
+          `
         ],
         technologies: ['js', 'ts', 'react', 'vue', 'nodejs', 'expressjs', 'mongodb', 'aws', 'socket.io', 'sass', 'tailwindcss', 'storybook', 'git', 'jenkins', 'kubernetes']
       },
@@ -173,6 +186,13 @@ export const EXPERIENCES: ExperienceDetails[] = [
         description: [
           `Developed an E-Service Training site, offering essential resources for Cisco's Third-Party
           Maintainer Field Engineers, referred to as 'FieldX.`,
+          `Developed an E-Service Training site, offering essential resources for Cisco's ThirdParty Maintainer Field Engineers, referred to as 'FieldX.' Employed AWS CloudFront
+          for efficient content distribution and AWS S3 for serving static content.`,
+          `Successfully transitioned a Monolith Application to a Serverless Architecture on
+          AWS, encompassing the migration of Elastic File Storage (EFS) to S3 through
+          DataSync, the transfer of Relational Database Service (RDS) to DynamoDB using
+          Database Migration Service, and the migration of CICD processes from Jenkins to
+          AWS Developer tools such as CodeBuild, CodePipeline, and CodeDeploy.`,
           ` Employed AWS CloudFront for efficient content distribution and AWS S3 for serving static content.`,
           `Migrated Cisco's FieldX CI/CD from Jenkins to AWS CodeBuild and AWS CodePipeline for
           Orchestration.`,
@@ -180,8 +200,10 @@ export const EXPERIENCES: ExperienceDetails[] = [
           FieldX Application.`,
           `Implemented AWS Cognito for authentication and seamlessly integrated it with Cisco's OKTA,
           ensuring OAUTH2 compatibility.`,
-          `Implemented Manage Licences Functionality and Manage Entitlements Functionality for Cisco U.
-          and Cisco U Admin. Proficient in Vue3, VueJs, TailwindCSS, Storybook and Figma.`
+          `Built an API with API Gateway and Lambda to retrieve training categories from
+          DynamoDB using NodeJs and ExpressJs.`,
+          `Updated BatchItems in DynamoDB for multiple Remedial Procedures in EST
+          Applications using DynamoDB and AWS SDK.`
         ],
         technologies: ['js', 'ts', 'react', 'vue', 'nodejs', 'expressjs', 'mongodb', 'aws', 'socket.io', 'sass', 'tailwindcss', 'storybook', 'git', 'jenkins', 'kubernetes']
       },
@@ -240,7 +262,7 @@ export const PROJECTS: ProjectDetails[] = [
     url: 'https://u.cisco.com',
     previewImage: U,
     technologies: [
-      'Vue3', 'Typescript', 'TailwindCSS', 'Storybook', 'Figma', 'JavaScript'
+      'Vue3', 'Typescript', 'TailwindCSS', 'Storybook', 'Figma', 'JavaScript' , 'Circle CI'
     ],
   },
   {
@@ -250,7 +272,7 @@ export const PROJECTS: ProjectDetails[] = [
     url: 'https://est.cisco.com',
     previewImage: EST,
     technologies: [
-      'Vue3', 'PrimeVue Components', 'Tailwind CSS', 'JavaScript', 'TypeScript', 'AWS CloudFront',
+      'Vue3', 'PrimeVue Components','NodeJs', 'ExpressJs' ,'Tailwind CSS', 'JavaScript', 'TypeScript', 'AWS CloudFront', 'AWS EFS', 'AWS RDS', "AWS DataSync" , "AWS VPC",
        'AWS S3', 'AWS Cognito', 'AWS Lambda', 'OAUTH2', 'AWS DynamoDB', 'AWS API Gateway', 'AWS CodeBuild', 'AWS CodePipeline'
     ],
   }

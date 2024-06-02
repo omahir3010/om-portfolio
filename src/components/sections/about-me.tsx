@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-import OmCoverPicture from '/public/images/logos/om-cover-pic.jpg';
+import OmCoverPicture from '/public/images/logos/om-pic.jpg';
 import Tag from '@/components/data-display/tag';
 import Container from '@/components/layout/container';
 import Typography from '@/components/general/typography';
@@ -47,6 +47,9 @@ const AboutMeSection = () => {
           <Typography>Finally, some quick bits about me.</Typography>
           <div className="flex flex-col gap-2 md:flex-row md:gap-6">
             <ul className="flex list-inside list-disc flex-col gap-2">
+            <Typography component="li" className='font-semibold'>
+              HashiCorp Certified: Terraform Associate
+              </Typography>
               <Typography component="li" className='font-semibold'>AWS Certified Cloud Practitioner Certified
               </Typography>
               <Typography component="li" className='font-semibold'>
